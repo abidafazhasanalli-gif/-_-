@@ -6,6 +6,17 @@
 <meta name="theme-color" content="#05332f">
 <title>منصتي الجامعية</title>
   <link rel="manifest" href="/manifest.json">
+  <!-- ربط ملف الـ Manifest -->
+<link rel="manifest" href="manifest.json">
+
+<!-- إعداد لون الشريط العلوي للمتصفح -->
+<meta name="theme-color" content="#1e3a8a">
+
+<!-- إعدادات إضافية لدعم أجهزة iOS (iPhone / iPad) -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="بوابة الطلاب">
+<link rel="apple-touch-icon" href="icons/icon-192x192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -373,3 +384,20 @@ var dark=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-sch
 </script>
 </body>
 </html>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // التقاط جميع الروابط في الصفحة
+    const links = document.querySelectorAll('a[href]');
+
+    links.forEach(link => {
+      const url = new URL(link.href, window.location.href);
+
+      // إذا كان الرابط يوجه خارج نطاق الموقع الحالي
+      if (url.origin !== window.location.origin) {
+        link.setAttribute('target', '_blank');
+        // حماية الأمان والخصوصية ومنع الصفحة الخارجية من التحكم بتطبيقك
+        link.setAttribute('rel', 'noopener noreferrer');
+      }
+    });
+  });
+</script>
