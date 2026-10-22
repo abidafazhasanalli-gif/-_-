@@ -1,0 +1,16 @@
+{
+  "name": "منصتي الجامعية",
+  "short_name": "منصتي",
+  "description": "منصة طلابية متكاملة تجمع الخدمات الجامعية الرسمية، حاسبة المعدل التراكمي، تتبع الغياب، مؤقت المذاكرة، إدارة المهام، والمواعيد الدراسية في مكان واحد.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#035336",
+  "theme_color": "hsl(158, 93%, 17%)",
+  "dir": "rtl",
+  "lang": "ar",
+  "categories": [
+    "education"
+  ]
+}
